@@ -1,0 +1,86 @@
+{
+  "id": "11d7e61a-7f7d-437d-bba4-df98a41c84f6",
+  "version": "2.0",
+  "name": "SeleniumTests",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "f2df79b1-eba8-44b4-998f-cb973d156b97",
+    "name": "E2ETest",
+    "commands": [{
+      "id": "62ff9b17-2b8b-42ca-be42-4141d51fa1a8",
+      "comment": "",
+      "command": "open",
+      "target": "/src/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfc29bf5-5807-4e81-a7bd-82705067300d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c704cc53-d405-49af-9833-f4a5188e270e",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tache1"
+    }, {
+      "id": "c66cabfd-0c78-47ce-8031-c0622d2a0473",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46ce4f78-dd48-4b12-bee3-ae31ba2fc0ec",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Tache1",
+      "targets": [],
+      "value": "Tache1"
+    }, {
+      "id": "ca1f2821-9f66-43d8-b731-570fed7f5443",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='removeTask(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='taskList']/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff7a89c6-6687-43b2-ad9c-b66759600241",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=Tache1",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "da791517-5108-4cc9-86b1-a6cfc9a79548",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f2df79b1-eba8-44b4-998f-cb973d156b97"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

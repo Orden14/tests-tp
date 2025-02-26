@@ -1,0 +1,10 @@
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="default">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <extensions>
+        <extension class="PHPUnit_Extensions_Selenium2TestCase" />
+    </extensions>
+</phpunit>
